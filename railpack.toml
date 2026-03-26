@@ -1,11 +1,11 @@
 [providers.java]
-version = "21"
+version = "11"
 
 [providers.java.build_tools]
 maven = true
 
 [build]
-cmd = "./mvnw -ntp clean package -DskipTests"
+cmd = "./mvnw -DoutputFile=target/mvn-dependency-list.log -B -DskipTests clean dependency:list install -Pproduction"
 
 [deploy]
 cmd = "java -jar target/*.jar --server.port=$PORT"
