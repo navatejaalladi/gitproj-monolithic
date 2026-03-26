@@ -2,3 +2,9 @@
 NIXPACKS_JDK_VERSION = "11"
 NIXPACKS_NODE_VERSION = "16"
 SPRING_PROFILES_ACTIVE = "prod"
+
+[phases.build]
+cmds = ["mvn clean package -Pprod -DskipTests"]
+
+[phases.setup]
+nixPkgs = ["openjdk11", "maven"]
