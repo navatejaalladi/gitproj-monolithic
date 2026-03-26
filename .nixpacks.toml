@@ -8,3 +8,6 @@ cmds = ["mvn clean package -Pprod -DskipTests"]
 
 [phases.setup]
 nixPkgs = ["openjdk11", "maven"]
+
+[start]
+cmd = "java -jar target/*.jar --server.port=$PORT"
