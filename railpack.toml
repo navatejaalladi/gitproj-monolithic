@@ -1,8 +1,5 @@
-[providers.java]
-version = "11"
-
-[providers.java.build_tools]
-maven = true
+[packages]
+java = "11"
 
 [build]
 cmd = "./mvnw -DoutputFile=target/mvn-dependency-list.log -B -DskipTests clean dependency:list install -Pproduction"
