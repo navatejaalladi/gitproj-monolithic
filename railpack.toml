@@ -1,0 +1,11 @@
+[providers.java]
+version = "21"
+
+[providers.java.build_tools]
+maven = true
+
+[build]
+cmd = "./mvnw -ntp clean package -DskipTests"
+
+[deploy]
+cmd = "java -jar target/*.jar --server.port=$PORT"
